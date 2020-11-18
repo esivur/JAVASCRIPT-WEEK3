@@ -27,21 +27,21 @@ console.log(`Each person gets ${sharePizza(3)} slices of pizza`)
 //hard
 class pii{
     
-    #name;
-    #ssn;
+    name;
+    ssn;
 
     constructor(name){
-        this.#name = name;
-        this.#ssn = "123-45-6789"
+        this.name = name;
+        this.ssn = "123-45-6789"
     }
 
     getName(){
-        return this.#name;
+        return this.name;
     }
 
 }
 var x1 = new pii("Pikachu");
-console.log(x1.#name);
+console.log(x1.name);
 
 
 //very hard
@@ -72,12 +72,9 @@ p1.fetchJob();
 
 class Programmer extends Person{
 
-    name;
-    job;
-    age;
     languages;
     busy;
-}
+
 constructor(name, job, age, languages){
     super(name, job, age);
     this.languages = languages;
@@ -102,7 +99,8 @@ learnLanguage(newLang){
 listLanguage(newLang){
     this.languages.forEach(function(currentValue, index, arr){console.log(arr[index])})
 }
-var p2 = new Programmer("Jordan", "Mechanic", 25), ["javascript"])
+}
+var p2 = new Programmer("Jordan", "Mechanic", 25, ["javascript", "php"])
 
 console.log(p2.busy)
 p2.completeTask();
@@ -113,4 +111,4 @@ p2.completeTask();
 p2.offerNewTask();
 console.log(p2.languages);
 p2.learnLanguage("mySQL");
-p2.listLanguages();
+p2.listLanguage();
